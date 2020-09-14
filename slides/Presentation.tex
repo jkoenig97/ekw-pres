@@ -1,0 +1,147 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  MISCELLANEOUS SETTINGS/COMMANDS  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\balA}[1][1]{BAL$^\mathup{I}_{#1:#1}$\xspace}
+\newcommand{\unbalA}[1][n]{UNBAL$^\mathup{I}_{1:#1}$\xspace}
+\newcommand{\balB}[1][1]{BAL$^\mathup{II}_{#1:#1}$\xspace}
+\newcommand{\unbalB}[1][n]{UNBAL$^\mathup{II}_{#1:1}$\xspace}
+
+% Add separator slide to the beginning of each section ==>
+%% Blue on white:
+%\AtBeginSection[]{%
+%	\begin{frame}[standout, c]{~}
+%		%\vfill
+%		\usebeamerfont{title}%
+%		\textcolor{SpotColor}{\insertsectionhead}
+%		%\vfill
+%	\end{frame}%
+%}
+% White on blue:
+\AtBeginSection[]{{%
+	\setbeamercolor{background canvas}{bg=UBonnBlue, fg=white}%
+	\colorlet{SpotColor}{white}%
+	\begin{frame}[standout, c]{~}
+		%\vfill
+		\usebeamerfont{title}\hypersetup{linkcolor=white}%
+		\insertsection
+		%\vfill
+	\end{frame}%
+	\colorlet{SpotColor}{UBonnBlue}%
+}}
+%% Alternativelyy, add ``Outline'' slide to the beginning of each section ==>
+%\AtBeginSection[]{
+%	\begin{frame}[plain]{Outline}
+%		\tableofcontents[currentsection]
+%	\end{frame}
+%}
+%% <==
+
+\title{Academic Presentations}
+
+\subtitle{A~LaTeX Template Using the \texttt{beamer} Class}
+
+%\subtitle{I~Prefer to Avoid Subtitles}
+
+\author[Smith, Smith, and Smith]{%
+	Adam Smith\inst{a,\,c} \and
+	% Set the name of the presenting coauthor in boldface:
+	\alert{Janet Smith}\inst{b,\,c} \and
+	Jeremiah Smith\inst{a}
+} % Author(s)
+
+\institute{%
+	\inst{a}\,University of Bonn, Germany \and
+	\inst{b}\,University of Cologne, Germany \and
+	\inst{c}\,Collaborative Research Center Transregio~224%
+} % Institution(s)
+
+\date{%
+	Name of the Inviting Institution/Seminar Series \\[\medskipamount]
+	\textmd{\today}%
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%
+%%  TITLE SLIDE  %%
+%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[standout]{~}
+
+	\titlepage%
+
+\end{frame}
+
+
+\begin{frame}[standout]{Outline}
+
+	\medskip
+	\tableofcontents
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%
+%%  MAIN PART  %%
+%%%%%%%%%%%%%%%%%
+
+\input{sections/s-title}
+
+%\input{sections/s-introduction}
+
+%\input{sections/s-setup}
+
+%\input{sections/s-example}
+
+%\input{sections/s-pipeline}
+
+%\input{sections/s-improvements}
+
+%\input{sections/s-extensions}
+
+%\input{sections/s-conclusion}
+
+%\input{sections/s-appendix}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+%%  REFERENCES  %%
+%%%%%%%%%%%%%%%%%%
+
+
+\section{\refname}
+%\renewcommand\bibsection{}
+%	% To prevent ``References'' from appearing twice in the navigation bar
+
+\begin{frame}[allowframebreaks]{\insertsection}
+
+	\begin{refcontext}[sorting=nyt]
+		% Sort BIBLIOGRAPHY by alphabet (while CITATIONS are sorted by year)
+	\printbibliography[heading=none]
+	\end{refcontext}
+
+	%% Only when using BibTeX instead of BibLaTeX ==>
+	%\bibliographystyle{0_0_Preamble/aea_doi_url_href}
+	%\bibliography{Library}
+	%% <==
+	
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%
+%%  APPENDIX  %%
+%%%%%%%%%%%%%%%%
+
+
+
