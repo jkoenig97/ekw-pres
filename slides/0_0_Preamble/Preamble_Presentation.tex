@@ -39,7 +39,18 @@
 \newcommand{\Ind}{\,\mathbb{I}\,}	%Indicator Function
 \newcommand{\Tau}{\mathcal{T}\thin
 }
+%\newcolumntype{g}{>{\columncolor{Gray}}c}
+\newcommand{\ind}{{\textbf{I}}}
 
+\newcommand{\var}{\mathrm{var}\thin}
+\newcommand{\plim}{\mathrm{plim}\thin}
+\newcommand\indep{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern5mu{#1#2}}}
+\newcommand{\notindep}{\ensuremath{\perp\!\!\!\!\!\!\diagup\!\!\!\!\!\!\perp}}%
+
+\newcommand{\mc}{\multicolumn}
+
+\newcommand{\ph}{\phantom}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  FUNDAMENTAL PACKAGES  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -84,25 +95,25 @@
 \definecolor{tabgrey}{RGB}{127, 127, 127}
 \definecolor{tablime}{RGB}{188, 189, 34}
 \definecolor{tabcyan}{RGB}{23, 190, 207}
-%\usepackage{bibentry}
-%\usepackage[T1]{fontenc}
+\usepackage{bibentry}
+\usepackage[T1]{fontenc}
 %\usepackage{bm}
 %\usepackage{bigints}
-%\usepackage{graphicx}
+\usepackage{graphicx}
 %\usepackage{dsfont}
-%\usepackage{listings}
+\usepackage{listings}
 
 %\usepackage{relsize}
 %\usepackage[natbibapa]{apacite}
 
 \usepackage{algpseudocode}
 \usepackage{algorithmicx}
-\usepackage{verbatim}
-%\usepackage{setspace}																					%\usepackage{hyperref}
+%\usepackage{verbatim}
+\usepackage{setspace}																					\usepackage{hyperref}
 
 \usepackage{multicol}
-%\DeclareMathOperator*{\argmin}{arg\,min}
-%\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
 \usepackage[absolute, overlay]{textpos}
 \usepackage{graphicx}
 \usepackage{amsmath}
